@@ -121,6 +121,9 @@ From time to time, the `requirements.txt` changes. To update, use this command:
 conda activate textgen
 cd text-generation-webui
 pip install -r requirements.txt --upgrade
+
+pip3 install -r requirements.txt --upgrade
+
 ```
 ## Downloading models
 
@@ -169,7 +172,17 @@ After downloading the model, follow these steps:
 
 ```
 python download-model.py EleutherAI/gpt-j-6B --text-only
+
+python download-model.py facebook/opt-1.3b
+
+python3 download-model.py THUDM/chatglm2-6b
+
+python3 download-model.py GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k
+
 ```
+
+galactica-6.7b-evol-instruct-70k:
+[https://huggingface.co/GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k](https://huggingface.co/GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k)
 
 When you load this model in default or notebook modes, the "HTML" tab will show the generated text in 4chan format.
 </details>
@@ -178,7 +191,7 @@ When you load this model in default or notebook modes, the "HTML" tab will show 
 
     conda activate textgen
     cd text-generation-webui
-    python server.py
+    python3 server.py --auto-devices
 
 Then browse to 
 

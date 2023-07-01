@@ -4,6 +4,12 @@ Downloads models from Hugging Face to models/username_modelname.
 Example:
 python download-model.py facebook/opt-1.3b
 
+python3 download-model.py THUDM/chatglm2-6b
+
+python3 download-model.py GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k
+
+python3 download-model.py Salesforce/xgen-7b-8k-inst
+
 '''
 
 import argparse
