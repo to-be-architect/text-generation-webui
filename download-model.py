@@ -10,6 +10,10 @@ python3 download-model.py GeorgiaTechResearchInstitute/galactica-6.7b-evol-instr
 
 python3 download-model.py Salesforce/xgen-7b-8k-inst
 
+python3 download-model.py openchat/openchat_8192
+
+python3 download-model.py openchat/openchat
+
 '''
 
 import argparse

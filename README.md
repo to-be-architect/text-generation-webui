@@ -179,10 +179,16 @@ python3 download-model.py THUDM/chatglm2-6b
 
 python3 download-model.py GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k
 
+python3 download-model.py Salesforce/xgen-7b-8k-inst
+
 ```
 
 galactica-6.7b-evol-instruct-70k:
 [https://huggingface.co/GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k](https://huggingface.co/GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k)
+
+Salesforce/xgen-7b-8k-inst:
+[https://huggingface.co/Salesforce/xgen-7b-8k-inst](https://huggingface.co/Salesforce/xgen-7b-8k-inst)
+
 
 When you load this model in default or notebook modes, the "HTML" tab will show the generated text in 4chan format.
 </details>
