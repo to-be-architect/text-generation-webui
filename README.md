@@ -170,6 +170,11 @@ After downloading the model, follow these steps:
 2. Place GPT-J 6B's config.json file in that same folder: [config.json](https://huggingface.co/EleutherAI/gpt-j-6B/raw/main/config.json).
 3. Download GPT-J 6B's tokenizer files (they will be automatically detected when you attempt to load GPT-4chan):
 
+Downloads models from Hugging Face to models/username_modelname.
+
+Example:
+
+
 ```
 python download-model.py EleutherAI/gpt-j-6B --text-only
 
@@ -181,13 +186,37 @@ python3 download-model.py GeorgiaTechResearchInstitute/galactica-6.7b-evol-instr
 
 python3 download-model.py Salesforce/xgen-7b-8k-inst
 
+
+python3 download-model.py facebook/opt-1.3b
+
+python3 download-model.py THUDM/chatglm2-6b
+
+python3 download-model.py GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k
+
+python3 download-model.py Salesforce/xgen-7b-8k-inst
+
+python3 download-model.py openchat/openchat_8192
+
+python3 download-model.py openchat/openchat
+
+python3 download-model.py WizardLM/WizardCoder-15B-V1.0
+
+
+
 ```
 
-galactica-6.7b-evol-instruct-70k:
+#### galactica-6.7b-evol-instruct-70k:
 [https://huggingface.co/GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k](https://huggingface.co/GeorgiaTechResearchInstitute/galactica-6.7b-evol-instruct-70k)
 
-Salesforce/xgen-7b-8k-inst:
+#### Salesforce/xgen-7b-8k-inst:
 [https://huggingface.co/Salesforce/xgen-7b-8k-inst](https://huggingface.co/Salesforce/xgen-7b-8k-inst)
+
+#### WizardLM/WizardCoder-15B-V1.0：
+[https://huggingface.co/WizardLM/WizardCoder-15B-V1.0](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0)
+
+
+
+
 
 
 When you load this model in default or notebook modes, the "HTML" tab will show the generated text in 4chan format.

@@ -14,6 +14,8 @@ python3 download-model.py openchat/openchat_8192
 
 python3 download-model.py openchat/openchat
 
+python3 download-model.py WizardLM/WizardCoder-15B-V1.0
+
 '''
 
 import argparse
