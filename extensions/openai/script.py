@@ -24,7 +24,7 @@ debug = True if 'OPENEDAI_DEBUG' in os.environ else False
 # Slightly different defaults for OpenAI's API
 # Data type is important, Ex. use 0.0 for a float 0
 default_req_params = {
-    'max_new_tokens': 200,
+    'max_new_tokens': 8192,
     'temperature': 1.0,
     'top_p': 1.0,
     'top_k': 1,
@@ -36,7 +36,7 @@ default_req_params = {
     'echo': False,
     'seed': -1,
     # 'n' : default(body, 'n', 1),  # 'n' doesn't have a direct map
-    'truncation_length': 2048,
+    'truncation_length': 8192,
     'add_bos_token': True,
     'do_sample': True,
     'typical_p': 1.0,

@@ -16,6 +16,12 @@ python3 download-model.py openchat/openchat
 
 python3 download-model.py WizardLM/WizardCoder-15B-V1.0
 
+# https://huggingface.co/baichuan-inc/Baichuan-13B-Chat
+python3 download-model.py baichuan-inc/Baichuan-13B-Chat
+
+# https://huggingface.co/internlm/internlm-chat-7b-8k
+python3 download-model.py internlm/internlm-chat-7b-8k
+
 '''
 
 import argparse

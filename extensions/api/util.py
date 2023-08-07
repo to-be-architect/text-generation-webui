@@ -11,9 +11,9 @@ from modules.presets import load_preset_memoized
 def build_parameters(body, chat=False):
 
     generate_params = {
-        'max_new_tokens': int(body.get('max_new_tokens', body.get('max_length', 200))),
+        'max_new_tokens': int(body.get('max_new_tokens', body.get('max_length', 8192))),
         'do_sample': bool(body.get('do_sample', True)),
-        'temperature': float(body.get('temperature', 0.5)),
+        'temperature': float(body.get('temperature', 0.9)),
         'top_p': float(body.get('top_p', 1)),
         'typical_p': float(body.get('typical_p', body.get('typical', 1))),
         'epsilon_cutoff': float(body.get('epsilon_cutoff', 0)),
@@ -24,7 +24,7 @@ def build_parameters(body, chat=False):
         'repetition_penalty_range': int(body.get('repetition_penalty_range', 0)),
         'encoder_repetition_penalty': float(body.get('encoder_repetition_penalty', 1.0)),
         'top_k': int(body.get('top_k', 0)),
-        'min_length': int(body.get('min_length', 0)),
+        'min_length': int(body.get('min_length', 1024)),
         'no_repeat_ngram_size': int(body.get('no_repeat_ngram_size', 0)),
         'num_beams': int(body.get('num_beams', 1)),
         'penalty_alpha': float(body.get('penalty_alpha', 0)),
@@ -35,7 +35,7 @@ def build_parameters(body, chat=False):
         'mirostat_eta': float(body.get('mirostat_eta', 0.1)),
         'seed': int(body.get('seed', -1)),
         'add_bos_token': bool(body.get('add_bos_token', True)),
-        'truncation_length': int(body.get('truncation_length', body.get('max_context_length', 2048))),
+        'truncation_length': int(body.get('truncation_length', body.get('max_context_length', 8192))),
         'ban_eos_token': bool(body.get('ban_eos_token', False)),
         'skip_special_tokens': bool(body.get('skip_special_tokens', True)),
         'custom_stopping_strings': '',  # leave this blank
