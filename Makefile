@@ -6,3 +6,6 @@ kill:
 
 install:
 	./install.sh
+
+run6000:
+	./run6000.sh

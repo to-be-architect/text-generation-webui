@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/pip3.10 install -r requirements.txt
+/home/me/anaconda3/bin/pip3 install -r requirements.txt

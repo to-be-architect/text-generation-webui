@@ -68,6 +68,56 @@ conda activate textgen
 
 #### 2. Install Pytorch
 
+
+
+#### 查看 NVIDIA Driver Version & CUDA Version: 11.7
+
+```
+$ nvidia-smi
+Sun Nov 26 03:10:23 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  Off  | 00000000:01:00.0  On |                  Off |
+|  0%   41C    P5    95W / 450W |   1193MiB / 24564MiB |     14%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA GeForce ...  Off  | 00000000:05:00.0 Off |                  Off |
+|  0%   29C    P8    11W / 450W |      8MiB / 24564MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      2917      G   /usr/lib/xorg/Xorg                525MiB |
+|    0   N/A  N/A      3165      G   /usr/bin/gnome-shell              248MiB |
+|    0   N/A  N/A      8470      G   ...RendererForSitePerProcess       98MiB |
+|    0   N/A  N/A     19150    C+G   ...704474770287154862,262144      315MiB |
+|    1   N/A  N/A      2917      G   /usr/lib/xorg/Xorg                  4MiB |
++-----------------------------------------------------------------------------+
+
+```
+
+
+#### 安装 Pytorch
+
+https://pytorch.org/get-started/previous-versions/
+
+
+```shell
+# CUDA 11.7
+pip3 install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+```
+
+不要用下面的命令直接安装（依赖GPU型号, Nvidia Driver Version, CUDA 版本）：
+
 | System | GPU | Command |
 |--------|---------|---------|
 | Linux/WSL | NVIDIA | `pip3 install torch torchvision torchaudio` |
@@ -76,6 +126,7 @@ conda activate textgen
 | Windows | NVIDIA | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117` |
 
 The up-to-date commands can be found here: https://pytorch.org/get-started/locally/. 
+
 
 #### 2.1 Special instructions
 
@@ -87,7 +138,7 @@ The up-to-date commands can be found here: https://pytorch.org/get-started/local
 ```
 git clone https://github.com/oobabooga/text-generation-webui
 cd text-generation-webui
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 #### llama.cpp with GPU acceleration
@@ -121,6 +172,9 @@ From time to time, the `requirements.txt` changes. To update, use this command:
 conda activate textgen
 cd text-generation-webui
 pip install -r requirements.txt --upgrade
+
+
+pip3 install torch torchvision torchaudio
 
 pip3 install -r requirements.txt --upgrade
 
@@ -201,7 +255,20 @@ python3 download-model.py openchat/openchat
 
 python3 download-model.py WizardLM/WizardCoder-15B-V1.0
 
+[//]: # (https://huggingface.co/Qwen/Qwen-14B-Chat-Int4)
+python3 download-model.py Qwen/Qwen-14B-Chat-Int4
 
+[//]: # (https://huggingface.co/Qwen/Qwen-14B-Chat)
+python3 download-model.py Qwen/Qwen-14B-Chat
+
+[//]: # (https://huggingface.co/THUDM/chatglm3-6b-32k)
+python3 download-model.py THUDM/chatglm3-6b-32k
+
+
+
+[//]: # (https://huggingface.co/openchat/openchat_3.5/tree/main)
+
+python3 download-model.py openchat/openchat_3.5
 
 ```
 
