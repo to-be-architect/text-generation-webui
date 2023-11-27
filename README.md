@@ -30,6 +30,11 @@ To learn how to use the various features, check out the Documentation: https://g
 
 ## Installation
 
+
+### CUDA Toolkit 11.7 Downloads 
+
+https://developer.nvidia.com/cuda-11-7-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=runfile_local
+
 ### One-click installers
 
 | Windows | Linux | macOS | WSL |
@@ -71,6 +76,10 @@ conda activate textgen
 
 
 #### 查看 NVIDIA Driver Version & CUDA Version: 11.7
+
+
+https://developer.nvidia.com/cuda-downloads/
+
 
 ```
 $ nvidia-smi
@@ -269,6 +278,9 @@ python3 download-model.py THUDM/chatglm3-6b-32k
 [//]: # (https://huggingface.co/openchat/openchat_3.5/tree/main)
 
 python3 download-model.py openchat/openchat_3.5
+
+[//]: # (https://huggingface.co/01-ai/Yi-34B-Chat-8bits)
+python3 download-model.py 01-ai/Yi-34B-Chat-8bits
 
 ```
 
