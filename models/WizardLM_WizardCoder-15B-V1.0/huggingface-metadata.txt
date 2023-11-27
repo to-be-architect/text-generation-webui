@@ -1,0 +1,5 @@
+url: https://huggingface.co/WizardLM/WizardCoder-15B-V1.0
+branch: main
+download date: 2023-07-08 02:05:39
+sha256sum:
+    7f33e8154086a4d60a7ee025210e05f6ec6545b424e2f366bbd736b7bce247df pytorch_model.bin
